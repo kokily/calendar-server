@@ -2,7 +2,7 @@ import type { Middleware } from 'koa';
 import { dataSource } from '../../server';
 import { User } from '../../entities/User';
 
-const authorize: Middleware = async (ctx, next) => {
+const authorized: Middleware = async (ctx, next) => {
   const userRepo = await dataSource.getRepository(User);
 
   if (!ctx.state.user) {
@@ -21,3 +21,5 @@ const authorize: Middleware = async (ctx, next) => {
 
   return next();
 };
+
+export default authorized;

@@ -1,4 +1,4 @@
-import { Middleware } from 'koa';
+import type { Middleware } from 'koa';
 import { isProd } from '../constants';
 
 const cors: Middleware = (ctx, next) => {

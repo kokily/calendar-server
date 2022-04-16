@@ -36,7 +36,7 @@ export async function generateToken(
 ): Promise<string> {
   const secretKey = process.env.JWT_SECRET!;
   const jwtOptions: SignOptions = {
-    issuer: '',
+    issuer: 'test',
     expiresIn: '15d',
     ...options,
   };
