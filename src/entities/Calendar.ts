@@ -6,6 +6,8 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
+export type TimeType = '11:30' | '13:00' | '14:30' | '16:00' | '17:30';
+
 @Entity()
 export class Calendar extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
@@ -18,7 +20,7 @@ export class Calendar extends BaseEntity {
   date!: Date;
 
   @Column('text')
-  time!: '11:30' | '13:00' | '14:30' | '16:00' | '17:30';
+  time!: TimeType;
 
   @Column('timestamptz')
   @CreateDateColumn()
