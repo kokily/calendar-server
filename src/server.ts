@@ -6,7 +6,7 @@ import { DataSource } from 'typeorm';
 import app from './app';
 import entities from './entities';
 
-const dataSource = new DataSource({
+export const dataSource = new DataSource({
   type: 'postgres',
   host: process.env.DB_HOST,
   port: 5432,

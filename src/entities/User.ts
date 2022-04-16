@@ -18,9 +18,6 @@ export class User extends BaseEntity {
   @Column('text')
   password!: string;
 
-  @Column('boolean')
-  admin!: boolean;
-
   @Column('timestamptz')
   @CreateDateColumn()
   created_at!: Date;
