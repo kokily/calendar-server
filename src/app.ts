@@ -9,13 +9,13 @@ import api from './api';
 const app = new Koa();
 const router = new Router();
 
-router.use('/api', api.routes());
-
 app.use(cors);
 app.use(logger());
 app.use(bodyParser({ multipart: true }));
 app.use(jwtMiddleware);
 app.use(router.routes());
 app.use(router.allowedMethods());
+
+router.use('/api', api.routes());
 
 export default app;

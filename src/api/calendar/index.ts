@@ -8,7 +8,7 @@ import update from './update';
 
 const calendar = new Router();
 
-calendar.post('/', authorized, add);
+calendar.post('/', add);
 calendar.get('/', list);
 calendar.get('/:id', authorized, read);
 calendar.delete('/:id', authorized, remove);

@@ -20,6 +20,9 @@ export class Calendar extends BaseEntity {
   date!: Date;
 
   @Column('text')
+  selected!: string;
+
+  @Column('text')
   time!: TimeType;
 
   @Column('timestamptz')
